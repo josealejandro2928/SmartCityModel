@@ -1,0 +1,66 @@
+////// 1- Create the City and add the basic attr /////
+var city  = new CityModel!City;
+
+city.name = "L'Aquila";
+city.population = 250000;
+city.area = 473.9;
+
+//// Creating Shape of a city ///
+var shape: Sequence = new Sequence;
+var p1 = new Point;
+p1.x = 0.0;
+p1.y = 0.0;
+shape.add(p1);
+var p2 = new Point;
+p2.x = 2.0;
+p2.y = 0.0;
+shape.add(p2);
+var p3 = new Point;
+p3.x = 2.0;
+p3.y = 3.0;
+shape.add(p3);
+var p4 = new Point;
+p4.x = 0.0;
+p4.y = 3.0;
+shape.add(p3);
+////////////////////////////////
+
+///// Create Transport DATA ////////
+var transportData = new Transport;
+transportData.hasDynamicPublicTransitInformation = false;
+transportData.trafficMonitoring = true;
+transportData.intersectionControl = false;
+city.transportData = transportData;
+
+
+////// 2- Create Some Houses /////
+var houses : Sequence = new Sequence;
+for (i in Sequence{1..10}){
+	var house  = new House;
+	house.address = "address " + i;
+	house.hasInternetAccess = i.mod(2) == 1 ? true : false;
+	houses.add(house);
+}
+
+
+////// 3- Create Some Services /////
+var services : Sequence = new Sequence;
+for (i in Sequence{1..5}){
+	var service  = new Service;
+	service.name = "Service" + i;
+	if (i>2) {
+		service.hasPublicWiFi = true;
+		service.hasWebOrMobileApp = true;
+	} else {
+	    service.hasPublicWiFi = false;
+	    service.hasWebOrMobileApp = false;
+	}
+	services.add(service);
+}
+
+////// 4- Linking services and houses to City /////
+city.houses.addAll(houses);
+city.services.addAll(services);
+
+city.println();
+city.transportData.println();

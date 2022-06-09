@@ -1,0 +1,59 @@
+@namespace(uri="city.project.mde", prefix="cityMM")
+package cityMM;
+
+
+class City{
+	attr String name;
+	attr int population;
+	attr float area;
+	val House[*] houses;
+	val Service[*] services; 
+	val Point[*] shape;
+	ref Transport transportData; 
+}
+
+class Transport{
+	attr boolean hasDynamicPublicTransitInformation;
+	attr boolean trafficMonitoring;
+	attr boolean intersectionControl;
+}
+
+class House{
+	attr String address;
+	attr boolean hasInternetAccess;
+	attr float bandwith;
+	attr boolean hasSmartWaterMeter;
+	attr boolean hasSmartElectricMeter;
+	attr ElectricalClass electricalClass;
+	  
+}
+
+
+class Service{
+	attr String name;
+	attr float bandwith;
+	attr boolean hasWebOrMobileApp = false;
+	attr boolean hasPublicWiFi = false;
+	attr boolean isAvailableEPayments;
+}
+
+class Network{
+	attr float x;
+	attr float y;
+	attr String mobileProtocol = "3G";
+	attr float raidusCoverange;
+}
+
+//// HELPER CLASES AND DEFINITIONS ////
+enum ElectricalClass {
+  			A=1;
+  			B=2;
+  			C=3;
+  			D=4;
+  			E=5;
+}
+
+class Point{
+	attr float x;
+	attr float y;
+}

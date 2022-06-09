@@ -1,0 +1,18 @@
+@namespace(uri="kpi.project.mde", prefix="kpiMM")
+package kpiMM;
+
+
+
+class KPI{
+	attr float averageBandWidth;
+	attr float percentHousesAccesToInternet;
+	attr float networkCoverageCity;
+	attr float percentHaousesBadEnergyEficiency;
+	attr float precentHousesSmartWaterMeter;
+	attr float percentHousesSmartElectricMeter;
+	attr float percentServicesPublicWiFi;
+	attr float percentServicesWebOrMobileApp;
+	attr float percentServicesAvailableEPayments;
+	op float getAverageBandWidth();
+}
+

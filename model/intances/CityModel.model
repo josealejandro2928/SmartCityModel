@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cityMM="city.project.mde" xsi:schemaLocation="city.project.mde ../smartcityMM.ecore">
+  <cityMM:City name="L'Aquila" population="250000" area="473.9" transportData="/5">
+    <houses address="address 1" hasInternetAccess="true"/>
+    <houses address="address 2"/>
+    <houses address="address 3" hasInternetAccess="true"/>
+    <houses address="address 4"/>
+    <houses address="address 5" hasInternetAccess="true"/>
+    <houses address="address 6"/>
+    <houses address="address 7" hasInternetAccess="true"/>
+    <houses address="address 8"/>
+    <houses address="address 9" hasInternetAccess="true"/>
+    <houses address="address 10"/>
+    <services name="Service1"/>
+    <services name="Service2"/>
+    <services name="Service3" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service4" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service5" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+  </cityMM:City>
+  <cityMM:Point/>
+  <cityMM:Point x="2.0"/>
+  <cityMM:Point x="2.0" y="3.0"/>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+</xmi:XMI>
