@@ -1,0 +1,11 @@
+rule dashboardPage
+  transform kpi : KPIModel!KPI { 
+  template : "index.egl"
+  target : "generated/" + "index.html" 
+}
+
+rule cityDataPage
+  transform city : CityModel!City { 
+  template : "city-data.egl"
+  target : "generated/" + "city-data.html" 
+}

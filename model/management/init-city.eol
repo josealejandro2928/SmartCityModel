@@ -7,7 +7,7 @@
 //city.shape.println();
 //city.houses.println();
 
-operation City populateCity()  {
+operation CityModel!City populateCity()  {
 	self.name = "L'Aquila";
 	self.population = 250000;
 	self.area = 473.9;
@@ -22,19 +22,19 @@ operation City populateCity()  {
 //// CREATING CHAPE OF A CITY ///
 operation createShape():Sequence{
 	var shape: Sequence = new Sequence;
-	var p1 = new Point;
+	var p1 = new CityModel!Point;
 	p1.x = 0.0;
 	p1.y = 0.0;
 	shape.add(p1);
-	var p2 = new Point;
+	var p2 = new CityModel!Point;
 	p2.x = 2.0;
 	p2.y = 0.0;
 	shape.add(p2);
-	var p3 = new Point;
+	var p3 = new CityModel!Point;
 	p3.x = 2.0;
 	p3.y = 3.0;
 	shape.add(p3);
-	var p4 = new Point;
+	var p4 = new CityModel!Point;
 	p4.x = 0.0;
 	p4.y = 3.0;
 	shape.add(p3);
@@ -43,8 +43,8 @@ operation createShape():Sequence{
 ////////////////////////////////
 
 ///// CREATE TRANSPORT DATA ////////
-operation createTransportData():Transport{
-	var transportData = new Transport;
+operation createTransportData():CityModel!Transport{
+	var transportData = new CityModel!Transport;
 	transportData.hasDynamicPublicTransitInformation = false;
 	transportData.trafficMonitoring = true;
 	transportData.intersectionControl = false;
@@ -57,7 +57,7 @@ operation createTransportData():Transport{
 operation createHouses():Sequence{
 	var houses : Sequence = new Sequence;
 	for (i in Sequence{1..20}){
-		var house  = new House;
+		var house  = new CityModel!House;
 		house.address = "address " + i;
 		house.hasInternetAccess = i.mod(3) == 0 ? false : true;
 		house.hasSmartElectricMeter = i.mod(5) == 0 ? true : false;
@@ -79,7 +79,7 @@ operation createHouses():Sequence{
 operation createServices():Sequence{
 	var services : Sequence = new Sequence;
 	for (i in Sequence{1..10}){
-		var service  = new Service;
+		var service  = new CityModel!Service;
 		service.name = "Service" + i;
 		service.hasPublicWiFi = i.mod(3) == 0 ? false : true;
 		service.hasWebOrMobileApp = i.mod(2) == 0 ? true : false;
@@ -94,21 +94,21 @@ operation createServices():Sequence{
 ////// CREATE NetWorks /////
 operation createNetworks():Sequence{
 	var networks : Sequence = new Sequence;
-	var n1 = new MobileNetworkAntenna;
+	var n1 = new CityModel!MobileNetworkAntenna;
 	n1.x = 1.0;
 	n1.y = 1.0;
 	n1.mobileProtocol = "4G";
 	n1.raidusCoverange = 0.7;
 	networks.add(n1);
 	
-	var n2 = new MobileNetworkAntenna;
+	var n2 = new CityModel!MobileNetworkAntenna;
 	n2.x = 1.0;
 	n2.y = 2.0;
 	n2.mobileProtocol = "4G";
 	n2.raidusCoverange = 1.0;
 	networks.add(n2);
 	
-	var n3 = new MobileNetworkAntenna;
+	var n3 = new CityModel!MobileNetworkAntenna;
 	n3.x = 2.0;
 	n3.y = 3.0;
 	n3.mobileProtocol = "4G";

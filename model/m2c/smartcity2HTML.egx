@@ -1,6 +1,0 @@
-rule smartcity2HTML
-  transform kpi : KPIModel!KPI { 
-  template : "smartcity2HTML.egl"
-  // and produce this HTML file
-  target : "generated/" + "index.html" 
-}
