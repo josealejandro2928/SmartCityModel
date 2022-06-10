@@ -9,6 +9,7 @@ class City{
 	val House[*] houses;
 	val Service[*] services; 
 	val Point[*] shape;
+	val MobileNetworkAntenna[*] mobileNetworks;
 	ref Transport transportData; 
 }
 
@@ -21,23 +22,23 @@ class Transport{
 class House{
 	attr String address;
 	attr boolean hasInternetAccess;
-	attr float bandwith;
+	attr float bandWidth;
 	attr boolean hasSmartWaterMeter;
 	attr boolean hasSmartElectricMeter;
-	attr ElectricalClass electricalClass;
+	attr String electricalClass;
 	  
 }
 
 
 class Service{
 	attr String name;
-	attr float bandwith;
+	attr float bandWidth;
 	attr boolean hasWebOrMobileApp = false;
 	attr boolean hasPublicWiFi = false;
 	attr boolean isAvailableEPayments;
 }
 
-class Network{
+class MobileNetworkAntenna{
 	attr float x;
 	attr float y;
 	attr String mobileProtocol = "3G";
@@ -45,14 +46,6 @@ class Network{
 }
 
 //// HELPER CLASES AND DEFINITIONS ////
-enum ElectricalClass {
-  			A=1;
-  			B=2;
-  			C=3;
-  			D=4;
-  			E=5;
-}
-
 class Point{
 	attr float x;
 	attr float y;

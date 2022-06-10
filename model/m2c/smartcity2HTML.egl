@@ -6,7 +6,7 @@
   	<meta charset="utf-8">
   	<meta content="width=device-width, initial-scale=1.0" name="viewport">
   	
-  	<title>[%=city.name%]</title>
+  	<title>[%=kpi.cityName%]</title>
   	<meta content="" name="description">
   	<meta content="" name="keywords">
 	
@@ -15,22 +15,13 @@
 </head>
 
 <body>
-	<h2>[%=city.name%]</h2>
-	
-	<h3>houses</h3>
-	<table class="table table-striped">
-		<tr>
-			<th>address</th>
-			<th>hasInternetConn.</th>
-		</tr>
-		[%for (house in city.houses){%]
-			<tr>
-			    <td>[%=house.address%]</td>
-				<td>[%=house.hasInternetAccess?"Yes":"No"%]</td>
-			</tr>
-		[%}%]
-	</table>
-	
+	<h2>[%=kpi.cityName%]</h2>
+	<span>
+		[%=kpi.averageBandWidth.name%]
+	</span>
+	<strong><span>
+		[%=kpi.averageBandWidth.quantitiveValue%]
+	</span></strong>
 </body>
 
 </html>

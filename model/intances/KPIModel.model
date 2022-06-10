@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:kpiMM="kpi.project.mde">
-  <kpiMM:KPI/>
-  <kpiMM:KPI/>
-  <kpiMM:KPI/>
-  <kpiMM:KPI/>
-</xmi:XMI>
+<kpiMM:KPI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:kpiMM="kpi.project.mde" cityName="L'Aquila">
+  <averageBandWidth quantitiveValue="0.5" name="BandWidth" labelValue="Regular">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </averageBandWidth>
+</kpiMM:KPI>

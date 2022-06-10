@@ -1,5 +1,5 @@
 rule smartcity2HTML
-  transform city : City { 
+  transform kpi : KPIModel!KPI { 
   template : "smartcity2HTML.egl"
   // and produce this HTML file
   target : "generated/" + "index.html" 

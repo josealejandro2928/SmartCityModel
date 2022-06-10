@@ -2,17 +2,27 @@
 package kpiMM;
 
 
-
 class KPI{
-	attr float averageBandWidth;
-	attr float percentHousesAccesToInternet;
-	attr float networkCoverageCity;
-	attr float percentHaousesBadEnergyEficiency;
-	attr float precentHousesSmartWaterMeter;
-	attr float percentHousesSmartElectricMeter;
-	attr float percentServicesPublicWiFi;
-	attr float percentServicesWebOrMobileApp;
-	attr float percentServicesAvailableEPayments;
-	op float getAverageBandWidth();
+    attr String cityName;
+	val IndicatorKPI averageBandWidth;
+	// attr float percentHousesAccesToInternet;
+	// attr float networkCoverageCity;
+	// attr float percentHaousesBadEnergyEficiency;
+	// attr float precentHousesSmartWaterMeter;
+	// attr float percentHousesSmartElectricMeter;
+	// attr float percentServicesPublicWiFi;
+	// attr float percentServicesWebOrMobileApp;
+	// attr float percentServicesAvailableEPayments;
 }
 
+
+class IndicatorKPI{
+	attr float quantitiveValue;
+	attr String name;
+	attr String labelValue;
+	val Label [*] labels;
+}
+
+class Label{
+	attr String name;
+}

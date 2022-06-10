@@ -1,7 +1,49 @@
 
+import "./init-city.eol";
 
+var city = new CityModel!City;
 var kpi  = new KPIModel!KPI;
-var city = 
 
-city.println();
+///// POPULATE THE MODEL CITY/////////
+city.populateCity();
+/////////////////////////////////////
+
+/// KPI COMPUTATION///
+kpi.cityName = city.name;
+kpi.getAverageBandWidth(city);
+
+////SHOW DATA FOR CONFIRMATION///////
 kpi.println();
+kpi.averageBandWidth.println();
+city.populateCity();
+city.println();
+city.shape.println();
+city.houses.println();
+///////////////////////////////////
+
+operation KPIModel!KPI getAverageBandWidth(city:CityModel!City){
+	var averageBandWidth = new KPIModel!IndicatorKPI;
+	averageBandWidth.name = "BandWidth";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    averageBandWidth.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var exelentValue = 50.0;
+    var value = 25.0/exelentValue;
+    averageBandWidth.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=0.2){
+    	averageBandWidth.labelValue = "Bad";
+    }else if(value > 0.2 and value <=0.6){
+    	averageBandWidth.labelValue = "Regular";
+    }else{
+    	averageBandWidth.labelValue = "Good";
+    }
+    self.averageBandWidth = averageBandWidth;
+}
+
+
