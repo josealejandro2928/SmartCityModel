@@ -62,7 +62,7 @@ operation createHouses():Sequence{
 		house.hasInternetAccess = i.mod(3) == 0 ? false : true;
 		house.hasSmartWaterMeter = i.mod(4) == 0 ? false : true;
 		house.hasSmartElectricMeter = i.mod(5) == 0 ? true : false;
-		house.bandWidth = i<10 ? 15.0 : 15.0 + i*1.2;
+		house.bandWidth = i<10 ? 50.0 : 50.0 + i*1.2;
 		if(i>0 and i<=3){
 			house.electricalClass = 'A';
 		}else if(i>3 and i<=5){

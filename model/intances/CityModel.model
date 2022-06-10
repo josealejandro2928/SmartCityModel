@@ -783,4 +783,130 @@
   <cityMM:Transport trafficMonitoring="true"/>
   <cityMM:Point y="3.0"/>
   <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:City name="L'Aquila" population="250000" area="473.9" transportData="/84">
+    <houses address="address 1" hasInternetAccess="true" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 2" hasInternetAccess="true" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 3" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 4" hasInternetAccess="true" bandWidth="15.0" electricalClass="C"/>
+    <houses address="address 5" hasInternetAccess="true" bandWidth="15.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="C"/>
+    <houses address="address 6" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 7" hasInternetAccess="true" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 8" hasInternetAccess="true" bandWidth="15.0" electricalClass="D"/>
+    <houses address="address 9" bandWidth="15.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 10" hasInternetAccess="true" bandWidth="27.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 11" hasInternetAccess="true" bandWidth="28.2" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 12" bandWidth="29.400002" electricalClass="D"/>
+    <houses address="address 13" hasInternetAccess="true" bandWidth="30.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 14" hasInternetAccess="true" bandWidth="31.800001" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 15" bandWidth="33.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 16" hasInternetAccess="true" bandWidth="34.2" electricalClass="D"/>
+    <houses address="address 17" hasInternetAccess="true" bandWidth="35.4" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 18" bandWidth="36.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 19" hasInternetAccess="true" bandWidth="37.800003" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 20" hasInternetAccess="true" bandWidth="39.0" hasSmartElectricMeter="true" electricalClass="D"/>
+    <services name="Service1" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service2" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service3" bandWidth="25.0"/>
+    <services name="Service4" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service5" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service6" bandWidth="25.0" hasWebOrMobileApp="true"/>
+    <services name="Service7" bandWidth="25.0" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service8" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service9" bandWidth="25.0" isAvailableEPayments="true"/>
+    <services name="Service10" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <shape/>
+    <shape x="2.0"/>
+    <shape x="2.0" y="3.0"/>
+    <mobileNetworks x="1.0" y="1.0" mobileProtocol="4G" raidusCoverange="0.7"/>
+    <mobileNetworks x="1.0" y="2.0" mobileProtocol="4G" raidusCoverange="1.0"/>
+    <mobileNetworks x="2.0" y="3.0" mobileProtocol="4G" raidusCoverange="1.25"/>
+  </cityMM:City>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:City name="L'Aquila" population="250000" area="473.9" transportData="/89">
+    <houses address="address 1" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 2" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 3" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 4" hasInternetAccess="true" bandWidth="50.0" electricalClass="C"/>
+    <houses address="address 5" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="C"/>
+    <houses address="address 6" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 7" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 8" hasInternetAccess="true" bandWidth="50.0" electricalClass="D"/>
+    <houses address="address 9" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 10" hasInternetAccess="true" bandWidth="62.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 11" hasInternetAccess="true" bandWidth="63.2" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 12" bandWidth="64.4" electricalClass="D"/>
+    <houses address="address 13" hasInternetAccess="true" bandWidth="65.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 14" hasInternetAccess="true" bandWidth="66.8" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 15" bandWidth="68.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 16" hasInternetAccess="true" bandWidth="69.2" electricalClass="D"/>
+    <houses address="address 17" hasInternetAccess="true" bandWidth="70.4" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 18" bandWidth="71.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 19" hasInternetAccess="true" bandWidth="72.8" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 20" hasInternetAccess="true" bandWidth="74.0" hasSmartElectricMeter="true" electricalClass="D"/>
+    <services name="Service1" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service2" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service3" bandWidth="25.0"/>
+    <services name="Service4" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service5" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service6" bandWidth="25.0" hasWebOrMobileApp="true"/>
+    <services name="Service7" bandWidth="25.0" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service8" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service9" bandWidth="25.0" isAvailableEPayments="true"/>
+    <services name="Service10" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <shape/>
+    <shape x="2.0"/>
+    <shape x="2.0" y="3.0"/>
+    <mobileNetworks x="1.0" y="1.0" mobileProtocol="4G" raidusCoverange="0.7"/>
+    <mobileNetworks x="1.0" y="2.0" mobileProtocol="4G" raidusCoverange="1.0"/>
+    <mobileNetworks x="2.0" y="3.0" mobileProtocol="4G" raidusCoverange="1.25"/>
+  </cityMM:City>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:City name="L'Aquila" population="250000" area="473.9" transportData="/94">
+    <houses address="address 1" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 2" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 3" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="A"/>
+    <houses address="address 4" hasInternetAccess="true" bandWidth="50.0" electricalClass="C"/>
+    <houses address="address 5" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="C"/>
+    <houses address="address 6" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 7" hasInternetAccess="true" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 8" hasInternetAccess="true" bandWidth="50.0" electricalClass="D"/>
+    <houses address="address 9" bandWidth="50.0" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 10" hasInternetAccess="true" bandWidth="62.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 11" hasInternetAccess="true" bandWidth="63.2" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 12" bandWidth="64.4" electricalClass="D"/>
+    <houses address="address 13" hasInternetAccess="true" bandWidth="65.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 14" hasInternetAccess="true" bandWidth="66.8" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 15" bandWidth="68.0" hasSmartWaterMeter="true" hasSmartElectricMeter="true" electricalClass="D"/>
+    <houses address="address 16" hasInternetAccess="true" bandWidth="69.2" electricalClass="D"/>
+    <houses address="address 17" hasInternetAccess="true" bandWidth="70.4" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 18" bandWidth="71.6" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 19" hasInternetAccess="true" bandWidth="72.8" hasSmartWaterMeter="true" electricalClass="D"/>
+    <houses address="address 20" hasInternetAccess="true" bandWidth="74.0" hasSmartElectricMeter="true" electricalClass="D"/>
+    <services name="Service1" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service2" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service3" bandWidth="25.0"/>
+    <services name="Service4" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true"/>
+    <services name="Service5" bandWidth="25.0" hasPublicWiFi="true"/>
+    <services name="Service6" bandWidth="25.0" hasWebOrMobileApp="true"/>
+    <services name="Service7" bandWidth="25.0" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service8" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <services name="Service9" bandWidth="25.0" isAvailableEPayments="true"/>
+    <services name="Service10" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
+    <shape/>
+    <shape x="2.0"/>
+    <shape x="2.0" y="3.0"/>
+    <mobileNetworks x="1.0" y="1.0" mobileProtocol="4G" raidusCoverange="0.7"/>
+    <mobileNetworks x="1.0" y="2.0" mobileProtocol="4G" raidusCoverange="1.0"/>
+    <mobileNetworks x="2.0" y="3.0" mobileProtocol="4G" raidusCoverange="1.25"/>
+  </cityMM:City>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
+  <cityMM:Point y="3.0"/>
+  <cityMM:Transport trafficMonitoring="true"/>
 </xmi:XMI>

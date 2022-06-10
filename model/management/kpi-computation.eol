@@ -32,8 +32,8 @@ operation KPIModel!KPI getAverageBandWidth(city:CityModel!City){
 	}
     averageBandWidth.labels = labels;
     /////// HERE THE COMPUTATION ////
-    var exelentValue = 50.0;
-    var value = 25.0/exelentValue;
+    var exelentValue = 200.0;
+    var value = 80.0/exelentValue;
     averageBandWidth.quantitiveValue = value;
     /////////////////////////////
     if(value >= 0 and value <=0.2){

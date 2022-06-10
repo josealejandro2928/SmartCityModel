@@ -1,0 +1,49 @@
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+.my-labels {
+  justify-content: flex-end;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.my-labels .btn-success {
+  color: white;
+  background-color: #55ce63;
+}
+.my-labels .btn-warning {
+  color: black;
+}
+
+.my-labels .btn-danger {
+  color: white;
+}
+
+.my-labels .btn.activated {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.my-labels .btn {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.my-labels .btn-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.my-labels .btn {
+  padding: 2px 8px;
+  text-transform: lowercase;
+  min-width: 50px;
+}
+
+.my-label .good {
+  background-color: #55ce63;
+}
