@@ -95,8 +95,7 @@
 
               <li class="nav-item hidden-sm-down">
                 <form class="app-search ps-3">
-                  <input type="text" class="form-control" placeholder="Search for..." />
-                  <a class="srh-btn"><i class="ti-search"></i></a>
+                  MDE Smart City Villages
                 </form>
               </li>
             </ul>
@@ -118,10 +117,10 @@
                   aria-expanded="false"
                 >
                   <img
-                    src="./assets/images/users/1.jpg"
+                    src="./assets/images/users/image-perfil.png"
                     alt="user"
                     class="profile-pic me-2"
-                  />Markarn Doe
+                  />Jose Alejandro
                 </a>
                 <ul class="dropdown-menu show" aria-labelledby="navbarDropdown"></ul>
               </li>
@@ -217,19 +216,20 @@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-        <div class="container-fluid">
-          <!-- ============================================================== -->
-          <!-- Sales chart -->
-          <!-- ============================================================== -->
+        <div class="container">
+
           <div class="row">
-            <div class="col-sm-3">
+          <!-- ============================================================== -->
+          <!-- averageBandWidth -->
+          <!-- ============================================================== -->
+            <div class="col-sm-6 col-md-4">
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">BandWidth KPI</h4>
-                  <p class="card-description text-muted my-0 mb-2">
+                  <p class="card-description my-0 mb-3">
                     Shows the ratio between the bandwidth average on the city and an excellent
                     internet speed
-                    <strong>200 mbits/sec</strong>
+                    <strong>100 Mbits/sec.</strong>
                   </p>
 
                   <div class="my-labels">
@@ -241,10 +241,80 @@
    
                     </div>
                   </div>
-                  <span class="text-warning">40.0%</span>
+                  <span class="text-warning">33.0%</span>
                   <div class="progress">
                     <div
                       class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 33.0%; height: 6px"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          <!-- ============================================================== -->
+          <!-- percentHousesAccesToInternet -->
+          <!-- ============================================================== -->
+            <div class="col-sm-6 col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">% of houses with Internet Access KPI</h4>
+                  <p class="card-description my-0 mb-2">
+                    Shows the percentage of houses that have internet access in the city.
+                  </p>
+
+                  <div class="my-labels">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    
+						 <button type="button" class="btn btn-success" disabled>Good</button>
+						 <button type="button" class="btn btn-warning activated" disabled>Regular</button>
+						 <button type="button" class="btn btn-danger" >Bad</button>
+   
+                    </div>
+                  </div>
+                  <span class="text-warning">70.0%</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-warning"
+                      role="progressbar"
+                      style="width: 70.0%; height: 6px"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          <!-- ============================================================== -->
+          <!-- percentHousesBadEnergyEfficiency -->
+          <!-- ============================================================== -->
+            <div class="col-sm-6 col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">% of houses with a Bad Energy Efficiency KPI</h4>
+                  <p class="card-description my-0 mb-2">
+                    Shows the percentage of houses that have an Energy Classification below <strong>C</strong>.
+                  </p>
+
+                  <div class="my-labels">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    
+						 <button type="button" class="btn btn-success activated" disabled>Good</button>
+						 <button type="button" class="btn btn-warning" disabled>Regular</button>
+						 <button type="button" class="btn btn-danger" >Bad</button>
+   
+                    </div>
+                  </div>
+                  <span class="text-success">40.0%</span>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
                       role="progressbar"
                       style="width: 40.0%; height: 6px"
                       aria-valuenow="25"
@@ -255,21 +325,33 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-sm-3">
+            
+          <!-- ============================================================== -->
+          <!-- percentHousesSmartElectricMeter -->
+          <!-- ============================================================== -->
+            <div class="col-sm-6 col-md-4">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Weekly Sales</h4>
-                  <div class="text-end">
-                    <h2 class="font-light mb-0"><i class="ti-arrow-up text-info"></i> $5,000</h2>
-                    <span class="text-muted">Todays Income</span>
+                  <h4 class="card-title">% of houses with a Smart Electrical Meter KPI</h4>
+                  <p class="card-description my-0 mb-2">
+                    Shows the percentage of houses that already have a smart meter installed.
+                  </p>
+
+                  <div class="my-labels">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    
+						 <button type="button" class="btn btn-success" disabled>Good</button>
+						 <button type="button" class="btn btn-warning" disabled>Regular</button>
+						 <button type="button" class="btn btn-danger activated" >Bad</button>
+   
+                    </div>
                   </div>
-                  <span class="text-info">30%</span>
+                  <span class="text-danger">20.0%</span>
                   <div class="progress">
                     <div
-                      class="progress-bar bg-info"
+                      class="progress-bar bg-danger"
                       role="progressbar"
-                      style="width: 30%; height: 6px"
+                      style="width: 20.0%; height: 6px"
                       aria-valuenow="25"
                       aria-valuemin="0"
                       aria-valuemax="100"
@@ -278,25 +360,11 @@
                 </div>
               </div>
             </div>
+            
+            
+     
           </div>
-          <!-- ============================================================== -->
-          <!-- Sales chart -->
-          <!-- ============================================================== -->
-          <!-- <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Revenue Statistics</h4>
-                                <div class="flot-chart">
-                                    <div class="flot-chart-content " id="flot-line-chart"
-                                        style="padding: 0px; position: relative;">
-                                        <canvas class="flot-base w-100" height="400"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+        
           <!-- ============================================================== -->
           <!-- Table -->
           <!-- ============================================================== -->

@@ -5,14 +5,13 @@ package kpiMM;
 class KPI{
     attr String cityName;
 	val IndicatorKPI averageBandWidth;
-	// attr float percentHousesAccesToInternet;
-	// attr float networkCoverageCity;
-	// attr float percentHaousesBadEnergyEficiency;
-	// attr float precentHousesSmartWaterMeter;
-	// attr float percentHousesSmartElectricMeter;
-	// attr float percentServicesPublicWiFi;
-	// attr float percentServicesWebOrMobileApp;
-	// attr float percentServicesAvailableEPayments;
+    val IndicatorKPI percentHousesAccesToInternet;
+	val IndicatorKPI percentHousesBadEnergyEfficiency;
+	val IndicatorKPI percentHousesSmartElectricMeter;
+	val IndicatorKPI percentServicesPublicWiFi;
+	val IndicatorKPI percentServicesWebOrMobileApp;
+	val IndicatorKPI percentServicesAvailableEPayments;
+	val IndicatorKPI networkCoverageCity;
 }
 
 

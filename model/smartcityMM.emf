@@ -23,7 +23,6 @@ class House{
 	attr String address;
 	attr boolean hasInternetAccess;
 	attr float bandWidth;
-	attr boolean hasSmartWaterMeter;
 	attr boolean hasSmartElectricMeter;
 	attr String electricalClass;
 	  

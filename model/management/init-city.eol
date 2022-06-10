@@ -60,12 +60,11 @@ operation createHouses():Sequence{
 		var house  = new House;
 		house.address = "address " + i;
 		house.hasInternetAccess = i.mod(3) == 0 ? false : true;
-		house.hasSmartWaterMeter = i.mod(4) == 0 ? false : true;
 		house.hasSmartElectricMeter = i.mod(5) == 0 ? true : false;
 		house.bandWidth = i<10 ? 50.0 : 50.0 + i*1.2;
-		if(i>0 and i<=3){
+		if(i>0 and i<=8){
 			house.electricalClass = 'A';
-		}else if(i>3 and i<=5){
+		}else if(i>8 and i<=12){
 			house.electricalClass = 'C';
 		}else{
 			house.electricalClass = 'D';

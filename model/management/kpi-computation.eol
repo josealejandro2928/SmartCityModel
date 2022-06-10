@@ -11,14 +11,17 @@ city.populateCity();
 /// KPI COMPUTATION///
 kpi.cityName = city.name;
 kpi.getAverageBandWidth(city);
-
+kpi.getPercentHousesAccesToInternet(city);
+kpi.getPercentHousesBadEnergyEfficiency(city);
+kpi.getPercentHousesSmartElectricMeter(city);
 ////SHOW DATA FOR CONFIRMATION///////
 kpi.println();
 kpi.averageBandWidth.println();
+kpi.percentHousesAccesToInternet.println();
+kpi.percentHousesBadEnergyEfficiency.println();
+kpi.percentHousesSmartElectricMeter.println();
 city.populateCity();
 city.println();
-city.shape.println();
-city.houses.println();
 ///////////////////////////////////
 
 operation KPIModel!KPI getAverageBandWidth(city:CityModel!City){
@@ -32,18 +35,119 @@ operation KPIModel!KPI getAverageBandWidth(city:CityModel!City){
 	}
     averageBandWidth.labels = labels;
     /////// HERE THE COMPUTATION ////
-    var exelentValue = 200.0;
-    var value = 80.0/exelentValue;
-    averageBandWidth.quantitiveValue = value;
+    var exelentValue = 100.0; // Mbps
+    var total = city.houses.size() + city.services.size();
+    var sumBandWidth = 0.0;
+    for (el in city.houses ){
+    	sumBandWidth = el.hasInternetAccess ?  sumBandWidth + el.bandWidth : sumBandWidth; 
+    }
+    for (el in city.services){
+    sumBandWidth = el.hasPublicWiFi ?  sumBandWidth + el.bandWidth : sumBandWidth; 
+    } 
+    var value = sumBandWidth / total;
+    averageBandWidth.quantitiveValue = ((value / exelentValue) * 100).floor() + 0.0;
     /////////////////////////////
-    if(value >= 0 and value <=0.2){
+    if(value >= 0 and value <=20){
     	averageBandWidth.labelValue = "Bad";
-    }else if(value > 0.2 and value <=0.6){
+    }else if(value > 20 and value <=60){
     	averageBandWidth.labelValue = "Regular";
     }else{
     	averageBandWidth.labelValue = "Good";
     }
     self.averageBandWidth = averageBandWidth;
+    
 }
+
+operation KPIModel!KPI getPercentHousesAccesToInternet(city:CityModel!City){
+	var percentHousesAccesToInternet = new KPIModel!IndicatorKPI;
+	percentHousesAccesToInternet.name = "% of houses with Internet Access";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentHousesAccesToInternet.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.houses.size();
+    var sum = 0.0;
+    for (el in city.houses ){
+    	sum = el.hasInternetAccess ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentHousesAccesToInternet.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=49){
+    	percentHousesAccesToInternet.labelValue = "Bad";
+    }else if(value > 49 and value <=75){
+    	percentHousesAccesToInternet.labelValue = "Regular";
+    }else{
+    	percentHousesAccesToInternet.labelValue = "Good";
+    }
+    self.percentHousesAccesToInternet = percentHousesAccesToInternet;
+}
+
+operation KPIModel!KPI getPercentHousesBadEnergyEfficiency(city:CityModel!City){
+	var percentHousesBadEnergyEfficiency = new KPIModel!IndicatorKPI;
+	percentHousesBadEnergyEfficiency.name = "% of houses with a Bad Energy Efficiency";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentHousesBadEnergyEfficiency.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.houses.size();
+    var sum = 0.0;
+    for (el in city.houses ){
+    	sum = (el.electricalClass == 'D') or (el.electricalClass == 'E') ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentHousesBadEnergyEfficiency.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=50){
+    	percentHousesBadEnergyEfficiency.labelValue = "Good";
+    }else if(value > 50 and value <=70){
+    	percentHousesBadEnergyEfficiency.labelValue = "Regular";
+    }else{
+    	percentHousesBadEnergyEfficiency.labelValue = "Bad";
+    }
+    self.percentHousesBadEnergyEfficiency = percentHousesBadEnergyEfficiency;
+}
+
+operation KPIModel!KPI getPercentHousesSmartElectricMeter(city:CityModel!City){
+	var percentHousesSmartElectricMeter = new KPIModel!IndicatorKPI;
+	percentHousesSmartElectricMeter.name = "% of houses with a Smart Electrical Meter";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentHousesSmartElectricMeter.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.houses.size();
+    var sum = 0.0;
+    for (el in city.houses ){
+    	sum = el.hasSmartElectricMeter ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentHousesSmartElectricMeter.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=30){
+    	percentHousesSmartElectricMeter.labelValue = "Bad";
+    }else if(value > 30 and value <=60){
+    	percentHousesSmartElectricMeter.labelValue = "Regular";
+    }else{
+    	percentHousesSmartElectricMeter.labelValue = "Good";
+    }
+    self.percentHousesSmartElectricMeter = percentHousesSmartElectricMeter;
+}
+
+
+//////////////// <---- HERE ADD YOUR FUNCTIONS -----> ///////////////////////////////
+
+
 
 
