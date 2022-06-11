@@ -15,3 +15,9 @@ rule dashBoardJsPlot
   template : "dashboard1.egl"
   target : "generated/js/pages/dashboards/" + "dashboard1.js" 
 }
+
+rule plotGMaps
+  transform city : CityModel!City { 
+  template : "jquery.gmaps.egl"
+  target : "generated/assets/plugins/gmaps/jquery.gmaps.js" 
+}

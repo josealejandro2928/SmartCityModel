@@ -11,6 +11,9 @@ operation CityModel!City populateCity()  {
 	self.name = "L'Aquila";
 	self.population = 250000;
 	self.area = 473.9;
+	self.lat = 42.34884;
+	self.lng = 13.39940;
+	self.area = 473.9;
 	self.shape = createShape();
 	self.transportData = createTransportData();
 	self.houses = createHouses();

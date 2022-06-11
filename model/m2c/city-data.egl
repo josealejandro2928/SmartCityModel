@@ -225,6 +225,7 @@
                                                 <th class="border-top-0">name</th>
                                                 <th class="border-top-0">population</th>
                                                 <th class="border-top-0">area</th>
+                                                <th class="border-top-0">location</th>
                                                 <th class="border-top-0"># houses</th>
                                                 <th class="border-top-0"># services</th>
                                                 <th class="border-top-0"># mobiles antenna</th>
@@ -235,6 +236,12 @@
 	                                                <td>[%=city.name%]</td>
 	                                                <td>[%=city.population%]</td>
 	                                                <td>[%=city.area%]</td>
+	                                                 <td>
+	                                                     <ul>
+	                                                     	<li> lat = [%=city.lat%]</li>
+	                                                     	<li> lng = [%=city.lng%]</li>
+	                                                     </ul>
+	                                                 </td>
 	                                                <td>[%=city.houses.size()%]</td>
 	                                                <td>[%=city.services.size()%]</td>
 	                                                <td>[%=city.mobileNetworks.size()%]</td>
