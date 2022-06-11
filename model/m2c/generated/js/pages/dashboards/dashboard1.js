@@ -1,26 +1,31 @@
-/*
-Template Name: Admin Pro Admin
-Author: Wrappixel
-Email: niravjoshi87@gmail.com
-File: js
-*/
 $(function () {
-    "use strict";
-    // ============================================================== 
-    // Newsletter
-    // ============================================================== 
-
+   "use strict";
     var offset = 0;
-    plot();
-
-    function plot() {
-        var sin = [],
-            cos = [];
-        for (var i = 0; i < 12; i += 0.2) {
-            sin.push([i, Math.sin(i + offset)]);
-            cos.push([i, Math.cos(i + offset)]);
-        }
-        var options = {
+    plotLine();
+    plotPie();
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+    function plotLine() {
+        let data = [[1, 50.0], [2, 50.0], [3, 50.0], [4, 50.0], [5, 50.0], [6, 50.0], [7, 50.0], [8, 50.0], [9, 0.0], [10, 62.0], [11, 63.2], [12, 64.4], [13, 65.6], [14, 66.8], [15, 68.0], [16, 69.2], [17, 70.4], [18, 0.0], [19, 72.8], [20, 74.0], ];
+        let options = {
             series: {
                 lines: {
                     show: true
@@ -30,13 +35,13 @@ $(function () {
                 }
             },
             grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
+                hoverable: true
             },
             yaxis: {
-                min: -1.2,
-                max: 1.2
+                min: 0,
+                max: 100
             },
-            colors: ["#009efb", "#55ce63"],
+            colors: ["#009efb"],
             grid: {
                 color: "#AFAFAF",
                 hoverable: true,
@@ -45,19 +50,68 @@ $(function () {
             },
             tooltip: true,
             tooltipOpts: {
-                content: "'%s' of %x.1 is %y.4",
+                content: "'%s' is %y.1 Mbps",
                 shifts: {
                     x: -60,
                     y: 25
                 }
             }
         };
-        var plotObj = $.plot($("#flot-line-chart"), [{
-            data: sin,
-            label: "sin(x)",
-        }, {
-            data: cos,
-            label: "cos(x)"
+        let plotObj = $.plot($("#flot-line-chart"), [{
+            data: data,
+            label: "bandWith",
         }], options);
+    }
+    
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+    
+    function plotPie() {
+        let classes = ['A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'C', 'C', 'C', 'C', 'D', 'D', 'D', 'D', 'D', 'D', 'D', 'D', ];
+        let frecCounting = {};
+        classes.map(e => {
+            if (e in frecCounting) {
+                frecCounting[e]++;
+            } else {
+                frecCounting[e] = 1;
+            }
+        })
+
+        let series = [];
+        let labels = [];
+        Object.keys(frecCounting).map((key) => {
+            series.push(frecCounting[key]);
+            labels.push(key);
+        })
+        var data = {
+            series,
+            labels
+        };
+
+        var options = {
+            labelInterpolationFnc: function (value) {
+                return value + " = " + Math.round((frecCounting[value] / data.series.reduce(sum)) * 100) + "%";
+            }
+        };
+        var sum = function (a, b) { return a + b };
+        new Chartist.Pie('.energy-class-pie', data, options);
     }
 });

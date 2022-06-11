@@ -6,6 +6,8 @@ class City{
 	attr String name;
 	attr int population;
 	attr float area;
+    attr float lat;
+	attr float lng;
 	val House[*] houses;
 	val Service[*] services; 
 	val Point[*] shape;

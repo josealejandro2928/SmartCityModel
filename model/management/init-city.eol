@@ -11,6 +11,9 @@ operation CityModel!City populateCity()  {
 	self.name = "L'Aquila";
 	self.population = 250000;
 	self.area = 473.9;
+	self.lat = 42.34884;
+	self.lng = 13.39940;
+	self.area = 473.9;
 	self.shape = createShape();
 	self.transportData = createTransportData();
 	self.houses = createHouses();
@@ -59,9 +62,10 @@ operation createHouses():Sequence{
 	for (i in Sequence{1..20}){
 		var house  = new CityModel!House;
 		house.address = "address " + i;
-		house.hasInternetAccess = i.mod(3) == 0 ? false : true;
+		house.hasInternetAccess = i.mod(3) == 0 and i.mod(9) == 0  ? false : true;
 		house.hasSmartElectricMeter = i.mod(5) == 0 ? true : false;
 		house.bandWidth = i<10 ? 50.0 : 50.0 + i*1.2;
+		house.bandWidth = house.hasInternetAccess ? house.bandWidth : 0.0;
 		if(i>0 and i<=8){
 			house.electricalClass = 'A';
 		}else if(i>8 and i<=12){

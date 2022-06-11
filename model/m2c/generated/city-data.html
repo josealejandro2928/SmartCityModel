@@ -11,7 +11,7 @@
     <meta name="description"
         content="Monster Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Monster Lite Template by WrapPixel</title>
+    <title>MDE Project</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/monster-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
@@ -40,36 +40,24 @@
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-              <div class="navbar-header" data-logobg="skin6">
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
-                <a class="navbar-brand" href="index.html">
-                  <!-- Logo icon -->
-                  <b class="logo-icon">
-                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                    <!-- Dark Logo icon -->
-                    <img src="./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
-                  </b>
-                  <!--End Logo icon -->
-                  <!-- Logo text -->
-                  <span class="logo-text">
-                    <!-- dark Logo text -->
-                    <img src="./assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                  </span>
-                </a>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- toggle and nav items -->
-                <!-- ============================================================== -->
-                <a
-                  class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
-                  href="javascript:void(0)"
-                  ><i class="ti-menu ti-close"></i
-                ></a>
-              </div>
+      <div class="navbar-header" data-logobg="skin6">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <a
+              class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+          </div>
               <!-- ============================================================== -->
               <!-- End Logo -->
               <!-- ============================================================== -->
@@ -156,7 +144,7 @@
                             aria-expanded="false"
                           >
                             <i class="me-3 fa fa-user" aria-hidden="true"></i
-                            ><span class="hide-menu">Profile</span></a
+                            ><span class="hide-menu">Authors</span></a
                           >
                         </li>
                        
@@ -166,7 +154,7 @@
                             href="map-google.html"
                             aria-expanded="false"
                             ><i class="me-3 fa fa-globe" aria-hidden="true"></i
-                            ><span class="hide-menu">Google Map</span></a
+                            ><span class="hide-menu">City Map</span></a
                           >
                         </li>
                       </ul>
@@ -206,17 +194,63 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container">
+            <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <!-- column -->
-                    <div class="col-sm-12">
+                	<!-- ============================================================== -->
+                    <!-- City -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">City</h4>
+                                <div class="table-responsive table-mod">
+                                    <table class="table user-table no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">name</th>
+                                                <th class="border-top-0">population</th>
+                                                <th class="border-top-0">area</th>
+                                                <th class="border-top-0">location</th>
+                                                <th class="border-top-0"># houses</th>
+                                                <th class="border-top-0"># services</th>
+                                                <th class="border-top-0"># mobiles antenna</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+	                                           <tr>
+	                                                <td>L'Aquila</td>
+	                                                <td>250000</td>
+	                                                <td>473.9</td>
+	                                                 <td>
+	                                                     <ul>
+	                                                     	<li> lat = 42.34884</li>
+	                                                     	<li> lng = 13.3994</li>
+	                                                     </ul>
+	                                                 </td>
+	                                                <td>20</td>
+	                                                <td>10</td>
+	                                                <td>3</td>
+                                            	</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- HOUSES -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Houses</h4>
-                                <div class="table-responsive">
+                                <div class="table-responsive table-mod">
                                     <table class="table user-table no-wrap">
                                         <thead>
                                             <tr>
@@ -232,163 +266,163 @@
                                         </thead>
                                         <tbody>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>1</td>
 	                                                <td>address 1</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>2</td>
 	                                                <td>address 2</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>3</td>
 	                                                <td>address 3</td>
-	                                                <td>No</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>4</td>
 	                                                <td>address 4</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>5</td>
 	                                                <td>address 5</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>Yes</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>6</td>
 	                                                <td>address 6</td>
-	                                                <td>No</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>7</td>
 	                                                <td>address 7</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>8</td>
 	                                                <td>address 8</td>
-	                                                <td>Yes</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>50.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>A</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>9</td>
 	                                                <td>address 9</td>
-	                                                <td>No</td>
-	                                                <td>50.0</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td>0.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>C</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>10</td>
 	                                                <td>address 10</td>
-	                                                <td>Yes</td>
-	                                                <td>62.0</td>
-	                                                <td>Yes</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>62.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
 	                                                <td>C</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>11</td>
 	                                                <td>address 11</td>
-	                                                <td>Yes</td>
-	                                                <td>63.2</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>63.2 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>C</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>12</td>
 	                                                <td>address 12</td>
-	                                                <td>No</td>
-	                                                <td>64.4</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>64.4 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>C</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>13</td>
 	                                                <td>address 13</td>
-	                                                <td>Yes</td>
-	                                                <td>65.6</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>65.6 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>14</td>
 	                                                <td>address 14</td>
-	                                                <td>Yes</td>
-	                                                <td>66.8</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>66.8 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>15</td>
 	                                                <td>address 15</td>
-	                                                <td>No</td>
-	                                                <td>68.0</td>
-	                                                <td>Yes</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>68.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>16</td>
 	                                                <td>address 16</td>
-	                                                <td>Yes</td>
-	                                                <td>69.2</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>69.2 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>17</td>
 	                                                <td>address 17</td>
-	                                                <td>Yes</td>
-	                                                <td>70.4</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>70.4 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>18</td>
 	                                                <td>address 18</td>
-	                                                <td>No</td>
-	                                                <td>71.6</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td>0.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>19</td>
 	                                                <td>address 19</td>
-	                                                <td>Yes</td>
-	                                                <td>72.8</td>
-	                                                <td>No</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>72.8 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
 	                                                <td>D</td>
                                             	</tr>
 	                                           <tr>
-	                                                <td>0</td>
+	                                                <td>20</td>
 	                                                <td>address 20</td>
-	                                                <td>Yes</td>
-	                                                <td>74.0</td>
-	                                                <td>Yes</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>74.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
 	                                                <td>D</td>
                                             	</tr>
    
@@ -398,6 +432,118 @@
                             </div>
                         </div>
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- SERVICES -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Services</h4>
+                                <div class="table-responsive table-mod">
+                                    <table class="table user-table no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">#</th>
+                                                <th class="border-top-0">name</th>
+                                                <th class="border-top-0">web or app</th>
+                                                <th class="border-top-0">public wifi</th>
+                                                <th class="border-top-0">bandwidth</th>
+                                                <th class="border-top-0">e-payments</th>
+                                                
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+	                                           <tr>
+	                                                <td>1</td>
+	                                                <td>Service1</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>2</td>
+	                                                <td>Service2</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>3</td>
+	                                                <td>Service3</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>4</td>
+	                                                <td>Service4</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>15.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>5</td>
+	                                                <td>Service5</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>6</td>
+	                                                <td>Service6</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-danger'>No</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>7</td>
+	                                                <td>Service7</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>8</td>
+	                                                <td>Service8</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>15.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>9</td>
+	                                                <td>Service9</td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td><span class='text-danger'>No</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+                                            	</tr>
+	                                           <tr>
+	                                                <td>10</td>
+	                                                <td>Service10</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td><span class='text-success'>Yes</span></td>
+	                                                <td>25.0 Mbps</td>
+	                                                <td><span class='text-success'>Yes</span></td>
+                                            	</tr>
+   
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

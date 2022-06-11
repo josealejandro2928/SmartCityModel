@@ -1,0 +1,13 @@
+$(document).ready(function () {
+    // Simple map
+    map = new GMaps({
+        el: '#gmaps-simple',
+        lat: [%=city.lat%],
+        lng: [%=city.lng%],
+        zoom: 12,
+        panControl: false,
+        streetViewControl: false,
+        mapTypeControl: false,
+        overviewMapControl: false
+    });
+});
