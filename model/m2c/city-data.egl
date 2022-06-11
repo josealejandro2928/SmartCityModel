@@ -206,17 +206,56 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container">
+            <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <!-- column -->
-                    <div class="col-sm-12">
+                	<!-- ============================================================== -->
+                    <!-- City -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">City</h4>
+                                <div class="table-responsive table-mod">
+                                    <table class="table user-table no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">name</th>
+                                                <th class="border-top-0">population</th>
+                                                <th class="border-top-0">area</th>
+                                                <th class="border-top-0"># houses</th>
+                                                <th class="border-top-0"># services</th>
+                                                <th class="border-top-0"># mobiles antenna</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+	                                           <tr>
+	                                                <td>[%=city.name%]</td>
+	                                                <td>[%=city.population%]</td>
+	                                                <td>[%=city.area%]</td>
+	                                                <td>[%=city.houses.size()%]</td>
+	                                                <td>[%=city.services.size()%]</td>
+	                                                <td>[%=city.mobileNetworks.size()%]</td>
+                                            	</tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- HOUSES -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Houses</h4>
-                                <div class="table-responsive">
+                                <div class="table-responsive table-mod">
                                     <table class="table user-table no-wrap">
                                         <thead>
                                             <tr>
@@ -233,12 +272,13 @@
                                         <tbody>
                                             [% var index = 0; %]
 	                                        [% for (c in city.houses) { %]
+	                                           [% index+=1;%]
 	                                           <tr>
 	                                                <td>[%= index %]</td>
 	                                                <td>[%= c.address %]</td>
-	                                                <td>[%= (c.hasInternetAccess) ? "Yes": "No" %]</td>
-	                                                <td>[%= c.bandWidth %]</td>
-	                                                <td>[%= (c.hasSmartElectricMeter) ? "Yes": "No" %]</td>
+	                                                <td>[%= (c.hasInternetAccess) ? "<span class='text-success'>Yes</span>": "<span class='text-danger'>No</span>" %]</td>
+	                                                <td>[%= c.bandWidth %] Mbps</td>
+	                                                <td>[%= (c.hasSmartElectricMeter) ? "<span class='text-success'>Yes</span>": "<span class='text-danger'>No</span>" %]</td>
 	                                                <td>[%= c.electricalClass %]</td>
                                             	</tr>
 											[% } %]   
@@ -248,6 +288,49 @@
                             </div>
                         </div>
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- SERVICES -->
+                    <!-- ============================================================== -->
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Services</h4>
+                                <div class="table-responsive table-mod">
+                                    <table class="table user-table no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0">#</th>
+                                                <th class="border-top-0">name</th>
+                                                <th class="border-top-0">web or app</th>
+                                                <th class="border-top-0">public wifi</th>
+                                                <th class="border-top-0">bandwidth</th>
+                                                <th class="border-top-0">e-payments</th>
+                                                
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            [% var index = 0; %]
+	                                        [% for (c in city.services) { %]
+	                                           [% index+=1;%]
+	                                           <tr>
+	                                                <td>[%= index %]</td>
+	                                                <td>[%= c.name %]</td>
+	                                                <td>[%= (c.hasWebOrMobileApp) ? "<span class='text-success'>Yes</span>": "<span class='text-danger'>No</span>" %]</td>
+	                                                <td>[%= (c.hasPublicWiFi) ? "<span class='text-success'>Yes</span>": "<span class='text-danger'>No</span>" %]</td>
+	                                                <td>[%= c.bandWidth %] Mbps</td>
+	                                                <td>[%= (c.isAvailableEPayments) ? "<span class='text-success'>Yes</span>": "<span class='text-danger'>No</span>" %]</td>
+                                            	</tr>
+											[% } %]   
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
                 </div>
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->

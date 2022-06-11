@@ -9,3 +9,9 @@ rule cityDataPage
   template : "city-data.egl"
   target : "generated/" + "city-data.html" 
 }
+
+rule dashBoardJsPlot
+  transform city : CityModel!City { 
+  template : "dashboard1.egl"
+  target : "generated/js/pages/dashboards/" + "dashboard1.js" 
+}

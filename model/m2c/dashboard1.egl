@@ -1,0 +1,92 @@
+$(function () {
+   "use strict";
+    var offset = 0;
+    plotLine();
+    plotPie();
+    [% var data = "[";%]
+    [% var index = 0;%]
+    [% for (c in city.houses) { %]
+    	   [% index++;%]
+	       [%data += '[' + index + ', '  + c.bandWidth + '], ';%]                       
+	[% } %]
+	[% data += ']';%]
+    function plotLine() {
+        let data = [%=data%];
+        let options = {
+            series: {
+                lines: {
+                    show: true
+                },
+                points: {
+                    show: true
+                }
+            },
+            grid: {
+                hoverable: true
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            colors: ["#009efb"],
+            grid: {
+                color: "#AFAFAF",
+                hoverable: true,
+                borderWidth: 0,
+                backgroundColor: '#FFF'
+            },
+            tooltip: true,
+            tooltipOpts: {
+                content: "'%s' is %y.1 Mbps",
+                shifts: {
+                    x: -60,
+                    y: 25
+                }
+            }
+        };
+        let plotObj = $.plot($("#flot-line-chart"), [{
+            data: data,
+            label: "bandWith",
+        }], options);
+    }
+    
+    [% var classes = "[";%]
+    [% var index = 0;%]
+    [% for(c in city.houses) { %]
+	      [%classes += "'";%]
+	      [%classes += c.electricalClass;%]
+	      [%classes += "'" + ', ';%]                         
+	[% } %]
+	[% classes += ']';%]
+    
+    function plotPie() {
+        let classes = [%=classes%];
+        let frecCounting = {};
+        classes.map(e => {
+            if (e in frecCounting) {
+                frecCounting[e]++;
+            } else {
+                frecCounting[e] = 1;
+            }
+        })
+
+        let series = [];
+        let labels = [];
+        Object.keys(frecCounting).map((key) => {
+            series.push(frecCounting[key]);
+            labels.push(key);
+        })
+        var data = {
+            series,
+            labels
+        };
+
+        var options = {
+            labelInterpolationFnc: function (value) {
+                return value + " = " + Math.round((frecCounting[value] / data.series.reduce(sum)) * 100) + "%";
+            }
+        };
+        var sum = function (a, b) { return a + b };
+        new Chartist.Pie('.energy-class-pie', data, options);
+    }
+});
