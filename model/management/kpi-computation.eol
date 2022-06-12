@@ -14,6 +14,11 @@ kpi.getAverageBandWidth(city);
 kpi.getPercentHousesAccesToInternet(city);
 kpi.getPercentHousesBadEnergyEfficiency(city);
 kpi.getPercentHousesSmartElectricMeter(city);
+kpi.getPercentNetworkCoverageCity(city);
+kpi.getSmartTransportLevelCity(city);
+kpi.getPercentServicesAvailableEPayments(city);
+kpi.getPercentServicesWebOrMobileApp(city);
+kpi.getPercentServicesPublicWiFi(city);
 ////SHOW DATA FOR CONFIRMATION///////
 kpi.println();
 kpi.averageBandWidth.println();
@@ -148,6 +153,152 @@ operation KPIModel!KPI getPercentHousesSmartElectricMeter(city:CityModel!City){
 
 //////////////// <---- HERE ADD YOUR FUNCTIONS -----> ///////////////////////////////
 
+operation KPIModel!KPI getPercentServicesPublicWiFi(city:CityModel!City){
+	var percentServicesPublicWiFi = new KPIModel!IndicatorKPI;
+	percentServicesPublicWiFi.name = "% percent of Services which provide Public WiFi";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentServicesPublicWiFi.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.services.size();
+    var sum = 0.0;
+    for (el in city.services ){
+    	sum = el.hasPublicWiFi ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentServicesPublicWiFi.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=30){
+    	percentServicesPublicWiFi.labelValue = "Bad";
+    }else if(value > 30 and value <=70){
+    	percentServicesPublicWiFi.labelValue = "Regular";
+    }else{
+    	percentServicesPublicWiFi.labelValue = "Good";
+    }
+    self.percentServicesPublicWiFi = percentServicesPublicWiFi;
+}
 
+operation KPIModel!KPI getPercentServicesWebOrMobileApp(city:CityModel!City){
+	var percentServicesWebOrMobileApp = new KPIModel!IndicatorKPI;
+	percentServicesWebOrMobileApp.name = "% percent of Services with Web Site Or Mobile App";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentServicesWebOrMobileApp.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.services.size();
+    var sum = 0.0;
+    for (el in city.services ){
+    	sum = el.hasWebOrMobileApp ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentServicesWebOrMobileApp.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=30){
+    	percentServicesWebOrMobileApp.labelValue = "Bad";
+    }else if(value > 30 and value <=70){
+    	percentServicesWebOrMobileApp.labelValue = "Regular";
+    }else{
+    	percentServicesWebOrMobileApp.labelValue = "Good";
+    }
+    self.percentServicesWebOrMobileApp = percentServicesWebOrMobileApp;
+}
+
+operation KPIModel!KPI getPercentServicesAvailableEPayments(city:CityModel!City){
+	var percentServicesAvailableEPayments = new KPIModel!IndicatorKPI;
+	percentServicesAvailableEPayments.name = "% percent of Services which allow to pay online [in Web Site or Mobile App] or to pay with credit card";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentServicesAvailableEPayments.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    var total = city.services.size();
+    var sum = 0.0;
+    for (el in city.services ){
+    	sum = el.isAvailableEPayments ?  sum + 1 : sum; 
+    }
+    var value = ((sum / total)*100).floor() + 0.0;
+    percentServicesAvailableEPayments.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=30){
+    	percentServicesAvailableEPayments.labelValue = "Bad";
+    }else if(value > 30 and value <=70){
+    	percentServicesAvailableEPayments.labelValue = "Regular";
+    }else{
+    	percentServicesAvailableEPayments.labelValue = "Good";
+    }
+    self.percentServicesAvailableEPayments = percentServicesAvailableEPayments;
+}
+
+operation KPIModel!KPI getSmartTransportLevelCity(city:CityModel!City){
+	var smartTransportLevelCity = new KPIModel!IndicatorKPI;
+	smartTransportLevelCity.name = "% Level of digitalization of the Transport City";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    smartTransportLevelCity.labels = labels;
+    /////// HERE THE COMPUTATION ////
+
+    var total = 3;
+    var sum = 0.0;
+    
+	sum = city.transportData.hasDynamicPublicTransitInformation ?  sum + 1 : sum; 
+	sum = city.transportData.trafficMonitoring ?  sum + 1 : sum; 
+	sum = city.transportData.intersectionControl ?  sum + 1 : sum;
+    
+    var value = ((sum / total)*100).floor() + 0.0;
+    smartTransportLevelCity.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <= 40){
+    	smartTransportLevelCity.labelValue = "Bad";
+    }else if(value > 40 and value <=70){
+    	smartTransportLevelCity.labelValue = "Regular";
+    }else{
+    	smartTransportLevelCity.labelValue = "Good";
+    }
+    self.smartTransportLevelCity = smartTransportLevelCity;
+}
+
+
+
+
+
+operation KPIModel!KPI getPercentNetworkCoverageCity(city:CityModel!City){
+	var percentNetworkCoverageCity = new KPIModel!IndicatorKPI;
+	percentNetworkCoverageCity.name = "% percent of Network Coverage of the City";
+	var labels = new Sequence();
+	for (attr in Sequence{"Good","Regular","Bad"}){
+		var labelObj = new KPIModel!Label;
+		labelObj.name = attr;
+		labels.add(labelObj);
+	}
+    percentNetworkCoverageCity.labels = labels;
+    /////// HERE THE COMPUTATION ////
+    /// TO DO
+    var value =  0.0;
+    percentNetworkCoverageCity.quantitiveValue = value;
+    /////////////////////////////
+    if(value >= 0 and value <=50){
+    	percentNetworkCoverageCity.labelValue = "Bad";
+    }else if(value > 50 and value <=80){
+    	percentNetworkCoverageCity.labelValue = "Regular";
+    }else{
+    	percentNetworkCoverageCity.labelValue = "Good";
+    }
+    self.percentNetworkCoverageCity = percentNetworkCoverageCity;
+}
 
 
