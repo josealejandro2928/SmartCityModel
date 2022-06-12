@@ -1,4 +1,4 @@
-@namespace(uri="kpi.project.mde", prefix="kpiMM")
+@namespace(uri="kpi.project.mde", prefix="")
 package kpiMM;
 
 

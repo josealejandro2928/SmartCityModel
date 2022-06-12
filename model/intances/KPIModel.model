@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<kpiMM:KPI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:kpiMM="kpi.project.mde" cityName="L'Aquila">
+<KPI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="kpi.project.mde" cityName="L'Aquila">
   <averageBandWidth quantitiveValue="41.0" name="BandWidth" labelValue="Regular">
     <labels name="Good"/>
     <labels name="Regular"/>
@@ -35,14 +35,14 @@
     <labels name="Regular"/>
     <labels name="Bad"/>
   </percentServicesAvailableEPayments>
-  <percentNetworkCoverageCity name="% percent of Network Coverage of the City" labelValue="Bad">
-    <labels name="Good"/>
-    <labels name="Regular"/>
-    <labels name="Bad"/>
-  </percentNetworkCoverageCity>
   <smartTransportLevelCity quantitiveValue="33.0" name="% Level of digitalization of the Transport City" labelValue="Bad">
     <labels name="Good"/>
     <labels name="Regular"/>
     <labels name="Bad"/>
   </smartTransportLevelCity>
-</kpiMM:KPI>
+  <percentNetworkCoverageCity name="% percent of Network Coverage of the City" labelValue="Bad">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </percentNetworkCoverageCity>
+</KPI>

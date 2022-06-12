@@ -1,4 +1,4 @@
-@namespace(uri="city.project.mde", prefix="cityMM")
+@namespace(uri="city.project.mde", prefix="")
 package cityMM;
 
 
