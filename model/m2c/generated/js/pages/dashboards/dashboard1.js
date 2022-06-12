@@ -116,8 +116,10 @@ $(function () {
         new Chartist.Pie('.energy-class-pie', data, options);
     }
     
+     
      function plotServicesBar() {
-        let series = [50, 70, 45];
+        let series = [50.0, 70.0, 40.0 ];
+        
         let labels = ["web or mobile app", "public WiFi", "available E-payments"];
 
         let data = { series, labels }

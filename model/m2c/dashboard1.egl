@@ -91,8 +91,14 @@ $(function () {
         new Chartist.Pie('.energy-class-pie', data, options);
     }
     
+    [% var kpiSingle =  kpi[0];%]
+    [% var dataServices = "[" + kpiSingle.percentServicesWebOrMobileApp.quantitiveValue + ', ' 
+    + kpiSingle.percentServicesPublicWiFi.quantitiveValue + ', ' +
+     kpiSingle.percentServicesAvailableEPayments.quantitiveValue + ' ]' ;%]
+     
      function plotServicesBar() {
-        let series = [50, 70, 45];
+        let series = [%=dataServices%];
+        
         let labels = ["web or mobile app", "public WiFi", "available E-payments"];
 
         let data = { series, labels }
