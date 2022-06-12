@@ -34,8 +34,8 @@ class House{
 class Service{
 	attr String name;
 	attr float bandWidth;
-	attr boolean hasWebOrMobileApp = false;
-	attr boolean hasPublicWiFi = false;
+	attr boolean hasWebOrMobileApp;
+	attr boolean hasPublicWiFi;
 	attr boolean isAvailableEPayments;
 }
 
