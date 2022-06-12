@@ -11,8 +11,8 @@ class KPI{
 	val IndicatorKPI percentServicesPublicWiFi;
 	val IndicatorKPI percentServicesWebOrMobileApp;
 	val IndicatorKPI percentServicesAvailableEPayments;
-	val IndicatorKPI percentNetworkCoverageCity;
 	val IndicatorKPI smartTransportLevelCity;
+	val IndicatorKPI percentNetworkCoverageCity;
 }
 
 

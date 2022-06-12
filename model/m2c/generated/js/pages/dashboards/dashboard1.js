@@ -3,6 +3,7 @@ $(function () {
     var offset = 0;
     plotLine();
     plotPie();
+    plotServicesBar();
                        
                        
                        
@@ -113,5 +114,22 @@ $(function () {
         };
         var sum = function (a, b) { return a + b };
         new Chartist.Pie('.energy-class-pie', data, options);
+    }
+    
+     function plotServicesBar() {
+        let series = [50, 70, 45];
+        let labels = ["web or mobile app", "public WiFi", "available E-payments"];
+
+        let data = { series, labels }
+        let options = {
+            distributeSeries: true,
+            low: 0,
+            high: 100,
+            axisY: {
+                scaleMinSpace: 25,
+            }
+        };
+        new Chartist.Bar('.services-bar-char', data, options);
+
     }
 });

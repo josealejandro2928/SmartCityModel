@@ -25,6 +25,11 @@ kpi.averageBandWidth.println();
 kpi.percentHousesAccesToInternet.println();
 kpi.percentHousesBadEnergyEfficiency.println();
 kpi.percentHousesSmartElectricMeter.println();
+kpi.percentServicesPublicWiFi.println();
+kpi.percentServicesAvailableEPayments.println();
+kpi.percentServicesWebOrMobileApp.println();
+kpi.smartTransportLevelCity.println();
+kpi.percentNetworkCoverageCity.println();
 city.populateCity();
 city.println();
 ///////////////////////////////////
@@ -174,7 +179,7 @@ operation KPIModel!KPI getPercentServicesPublicWiFi(city:CityModel!City){
     /////////////////////////////
     if(value >= 0 and value <=30){
     	percentServicesPublicWiFi.labelValue = "Bad";
-    }else if(value > 30 and value <=70){
+    }else if(value > 30 and value <70){
     	percentServicesPublicWiFi.labelValue = "Regular";
     }else{
     	percentServicesPublicWiFi.labelValue = "Good";
@@ -213,7 +218,7 @@ operation KPIModel!KPI getPercentServicesWebOrMobileApp(city:CityModel!City){
 
 operation KPIModel!KPI getPercentServicesAvailableEPayments(city:CityModel!City){
 	var percentServicesAvailableEPayments = new KPIModel!IndicatorKPI;
-	percentServicesAvailableEPayments.name = "% percent of Services which allow to pay online [in Web Site or Mobile App] or to pay with credit card";
+	percentServicesAvailableEPayments.name = "% percent of Services which allow to pay online or to pay with credit card";
 	var labels = new Sequence();
 	for (attr in Sequence{"Good","Regular","Bad"}){
 		var labelObj = new KPIModel!Label;

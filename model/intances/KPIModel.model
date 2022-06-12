@@ -20,4 +20,29 @@
     <labels name="Regular"/>
     <labels name="Bad"/>
   </percentHousesSmartElectricMeter>
+  <percentServicesPublicWiFi quantitiveValue="70.0" name="% percent of Services which provide Public WiFi" labelValue="Good">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </percentServicesPublicWiFi>
+  <percentServicesWebOrMobileApp quantitiveValue="50.0" name="% percent of Services with Web Site Or Mobile App" labelValue="Regular">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </percentServicesWebOrMobileApp>
+  <percentServicesAvailableEPayments quantitiveValue="40.0" name="% percent of Services which allow to pay online or to pay with credit card" labelValue="Regular">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </percentServicesAvailableEPayments>
+  <percentNetworkCoverageCity name="% percent of Network Coverage of the City" labelValue="Bad">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </percentNetworkCoverageCity>
+  <smartTransportLevelCity quantitiveValue="33.0" name="% Level of digitalization of the Transport City" labelValue="Bad">
+    <labels name="Good"/>
+    <labels name="Regular"/>
+    <labels name="Bad"/>
+  </smartTransportLevelCity>
 </kpiMM:KPI>
