@@ -4,64 +4,54 @@ $(function () {
     plotLine();
     plotPie();
     plotServicesBar();
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
     function plotLine() {
-        let data = [[1, 50.0], [2, 50.0], [3, 50.0], [4, 50.0], [5, 50.0], [6, 50.0], [7, 50.0], [8, 50.0], [9, 0.0], [10, 62.0], [11, 63.2], [12, 64.4], [13, 65.6], [14, 66.8], [15, 68.0], [16, 69.2], [17, 70.4], [18, 0.0], [19, 72.8], [20, 74.0], ];
+       let labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ];
+       let series = [[50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 0.0, 62.0, 63.2, 64.4, 65.6, 66.8, 68.0, 69.2, 70.4, 0.0, 72.8, 74.0, ]];
+
         let options = {
-            series: {
-                lines: {
-                    show: true
-                },
-                points: {
-                    show: true
-                }
+            axisX: {
+                showLabel: true,
+                showGrid: true,
             },
-            grid: {
-                hoverable: true
+            // Options for Y-Axis
+            axisY: {
+                showLabel: true,
+                showGrid: true,
+                type: undefined,
+                scaleMinSpace: 20,
+                onlyInteger: true
             },
-            yaxis: {
-                min: 0,
-                max: 100
-            },
-            colors: ["#009efb"],
-            grid: {
-                color: "#AFAFAF",
-                hoverable: true,
-                borderWidth: 0,
-                backgroundColor: '#FFF'
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "'%s' is %y.1 Mbps",
-                shifts: {
-                    x: -60,
-                    y: 25
-                }
-            }
+            showLine: true,
+            showPoint: true,
+            showArea: true,
+            lineSmooth: true,
+            showGridBackground: false,
+            low: 0,
+            high: 100,
+            fullWidth: false
         };
-        let plotObj = $.plot($("#flot-line-chart"), [{
-            data: data,
-            label: "bandWith",
-        }], options);
+        let data = { labels, series };
+        new Chartist.Line('.bandwith-line', data, options);
     }
     
                          

@@ -4,51 +4,44 @@ $(function () {
     plotLine();
     plotPie();
     plotServicesBar();
-    [% var data = "[";%]
+    [% var series = "[[";%]
+    [% var labels = "[";%]
     [% var index = 0;%]
     [% for (c in city.houses) { %]
     	   [% index++;%]
-	       [%data += '[' + index + ', '  + c.bandWidth + '], ';%]                       
+	       [%series += c.bandWidth + ', ';%]
+	       [%labels += index + ', ';%]                        
 	[% } %]
-	[% data += ']';%]
+	[% series += ']]';%]
+	[% labels += ']';%]
     function plotLine() {
-        let data = [%=data%];
+       let labels = [%=labels%];
+       let series = [%=series%];
+
         let options = {
-            series: {
-                lines: {
-                    show: true
-                },
-                points: {
-                    show: true
-                }
+            axisX: {
+                showLabel: true,
+                showGrid: true,
             },
-            grid: {
-                hoverable: true
+            // Options for Y-Axis
+            axisY: {
+                showLabel: true,
+                showGrid: true,
+                type: undefined,
+                scaleMinSpace: 20,
+                onlyInteger: true
             },
-            yaxis: {
-                min: 0,
-                max: 100
-            },
-            colors: ["#009efb"],
-            grid: {
-                color: "#AFAFAF",
-                hoverable: true,
-                borderWidth: 0,
-                backgroundColor: '#FFF'
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "'%s' is %y.1 Mbps",
-                shifts: {
-                    x: -60,
-                    y: 25
-                }
-            }
+            showLine: true,
+            showPoint: true,
+            showArea: true,
+            lineSmooth: true,
+            showGridBackground: false,
+            low: 0,
+            high: 100,
+            fullWidth: false
         };
-        let plotObj = $.plot($("#flot-line-chart"), [{
-            data: data,
-            label: "bandWith",
-        }], options);
+        let data = { labels, series };
+        new Chartist.Line('.bandwith-line', data, options);
     }
     
     [% var classes = "[";%]

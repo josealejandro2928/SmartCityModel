@@ -1,0 +1,26 @@
+rule dashboardPage
+  transform kpi : KPI { 
+  template : "index.egl"
+  target : "generated/" + "index.html" 
+}
+
+rule cityDataPage
+  transform city : City { 
+  template : "city-data.egl"
+  target : "generated/" + "city-data.html" 
+}
+
+rule dashBoardJsPlot
+  transform city : City { 
+  template : "dashboard1.egl"
+  target : "generated/js/pages/dashboards/" + "dashboard1.js"
+   parameters : Map {
+    "kpi" = KPIModel!KPI.allInstances()
+  }
+}
+
+rule plotGMaps
+  transform city : City { 
+  template : "jquery.gmaps.egl"
+  target : "generated/assets/plugins/gmaps/jquery.gmaps.js" 
+}
