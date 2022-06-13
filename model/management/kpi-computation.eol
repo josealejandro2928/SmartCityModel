@@ -14,7 +14,7 @@ kpi.getAverageBandWidth(city);
 kpi.getPercentHousesAccesToInternet(city);
 kpi.getPercentHousesBadEnergyEfficiency(city);
 kpi.getPercentHousesSmartElectricMeter(city);
-kpi.getPercentNetworkCoverageCity(city);
+//kpi.getPercentNetworkCoverageCity(city);
 kpi.getSmartTransportLevelCity(city);
 kpi.getPercentServicesAvailableEPayments(city);
 kpi.getPercentServicesWebOrMobileApp(city);
@@ -281,29 +281,29 @@ operation KPIModel!KPI getSmartTransportLevelCity(city:CityModel!City){
 
 
 
-operation KPIModel!KPI getPercentNetworkCoverageCity(city:CityModel!City){
-	var percentNetworkCoverageCity = new KPIModel!IndicatorKPI;
-	percentNetworkCoverageCity.name = "% percent of Network Coverage of the City";
-	var labels = new Sequence();
-	for (attr in Sequence{"Good","Regular","Bad"}){
-		var labelObj = new KPIModel!Label;
-		labelObj.name = attr;
-		labels.add(labelObj);
-	}
-    percentNetworkCoverageCity.labels = labels;
-    /////// HERE THE COMPUTATION ////
-    /// TO DO
-    var value =  0.0;
-    percentNetworkCoverageCity.quantitiveValue = value;
-    /////////////////////////////
-    if(value >= 0 and value <=50){
-    	percentNetworkCoverageCity.labelValue = "Bad";
-    }else if(value > 50 and value <=80){
-    	percentNetworkCoverageCity.labelValue = "Regular";
-    }else{
-    	percentNetworkCoverageCity.labelValue = "Good";
-    }
-    self.percentNetworkCoverageCity = percentNetworkCoverageCity;
-}
+//operation KPIModel!KPI getPercentNetworkCoverageCity(city:CityModel!City){
+//	var percentNetworkCoverageCity = new KPIModel!IndicatorKPI;
+//	percentNetworkCoverageCity.name = "% percent of Network Coverage of the City";
+//	var labels = new Sequence();
+//	for (attr in Sequence{"Good","Regular","Bad"}){
+//		var labelObj = new KPIModel!Label;
+//		labelObj.name = attr;
+//		labels.add(labelObj);
+//	}
+//    percentNetworkCoverageCity.labels = labels;
+//    /////// HERE THE COMPUTATION ////
+//    /// TO DO
+//    var value =  0.0;
+//    percentNetworkCoverageCity.quantitiveValue = value;
+//    /////////////////////////////
+//    if(value >= 0 and value <=50){
+//    	percentNetworkCoverageCity.labelValue = "Bad";
+//    }else if(value > 50 and value <=80){
+//    	percentNetworkCoverageCity.labelValue = "Regular";
+//    }else{
+//    	percentNetworkCoverageCity.labelValue = "Good";
+//    }
+//    self.percentNetworkCoverageCity = percentNetworkCoverageCity;
+//}
 
 

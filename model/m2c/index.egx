@@ -1,13 +1,37 @@
 rule dashboardPage
   transform kpi : KPIModel!KPI { 
   template : "index.egl"
-  target : "generated/" + "index.html" 
+  target : "generated/" + "index.html"
+   parameters : Map {
+    "baseRef" = "file:///home/jose/epsilon-2-42/workspace/SmartCityModel/model/m2c/generated/"
+  } 
 }
 
 rule cityDataPage
   transform city : CityModel!City { 
   template : "city-data.egl"
   target : "generated/" + "city-data.html" 
+  parameters : Map {
+    "baseRef" = "file:///home/jose/epsilon-2-42/workspace/SmartCityModel/model/m2c/generated/"
+  } 
+}
+
+rule authorsPage
+  transform city : CityModel!City { 
+  template : "pages-profile.egl"
+  target : "generated/" + "pages-profile.html" 
+  parameters : Map {
+    "baseRef" = "file:///home/jose/epsilon-2-42/workspace/SmartCityModel/model/m2c/generated/"
+  } 
+}
+
+rule mapPage
+  transform city : CityModel!City { 
+  template : "map-google.egl"
+  target : "generated/" + "map-google.html" 
+  parameters : Map {
+    "baseRef" = "file:///home/jose/epsilon-2-42/workspace/SmartCityModel/model/m2c/generated/"
+  } 
 }
 
 rule dashBoardJsPlot

@@ -40,9 +40,4 @@
     <labels name="Regular"/>
     <labels name="Bad"/>
   </smartTransportLevelCity>
-  <percentNetworkCoverageCity name="% percent of Network Coverage of the City" labelValue="Bad">
-    <labels name="Good"/>
-    <labels name="Regular"/>
-    <labels name="Bad"/>
-  </percentNetworkCoverageCity>
 </KPI>

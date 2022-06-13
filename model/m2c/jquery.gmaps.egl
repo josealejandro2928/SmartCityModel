@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    [%"jquery.gmaps.js generated".println();%]
     // Simple map
     map = new GMaps({
         el: '#gmaps-simple',

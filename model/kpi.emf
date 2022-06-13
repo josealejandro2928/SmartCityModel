@@ -12,7 +12,6 @@ class KPI{
 	val IndicatorKPI percentServicesWebOrMobileApp;
 	val IndicatorKPI percentServicesAvailableEPayments;
 	val IndicatorKPI smartTransportLevelCity;
-	val IndicatorKPI percentNetworkCoverageCity;
 }
 
 

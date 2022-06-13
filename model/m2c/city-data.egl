@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <base href="file:///home/jose/epsilon-2-4/workspace/SmartCityModel/model/m2c/generated/" />
+    <base href="[%=baseRef%]" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -184,6 +184,7 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
+            	[%"city-data.html generated".println();%]
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
@@ -205,7 +206,6 @@
                                                 <th class="border-top-0">location</th>
                                                 <th class="border-top-0"># houses</th>
                                                 <th class="border-top-0"># services</th>
-                                                <th class="border-top-0"># mobiles antenna</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -221,7 +221,6 @@
 	                                                 </td>
 	                                                <td>[%=city.houses.size()%]</td>
 	                                                <td>[%=city.services.size()%]</td>
-	                                                <td>[%=city.mobileNetworks.size()%]</td>
                                             	</tr>
                                         </tbody>
                                     </table>

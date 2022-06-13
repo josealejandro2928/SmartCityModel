@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_GNWOcOsHEeyXw5aNeM3JUg" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_8NNZsOsbEeyeF-J0HwQntg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8NUucOsbEeyeF-J0HwQntg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NVVgOsbEeyeF-J0HwQntg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NVVgesbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NVVgusbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NV8kOsbEeyeF-J0HwQntg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NV8kesbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NV8kusbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NV8k-sbEeyeF-J0HwQntg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NV8lOsbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NV8lesbEeyeF-J0HwQntg"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="smartcityMM.ecore#//City"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8NNZsesbEeyeF-J0HwQntg" x="516" y="84"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_8NV8lusbEeyeF-J0HwQntg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8NV8mOsbEeyeF-J0HwQntg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NV8mesbEeyeF-J0HwQntg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NV8musbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NV8m-sbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NV8nOsbEeyeF-J0HwQntg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NV8nesbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NV8nusbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NWjoOsbEeyeF-J0HwQntg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NWjoesbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NWjousbEeyeF-J0HwQntg"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="smartcityMM.ecore#//Transport"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8NV8l-sbEeyeF-J0HwQntg" x="84" y="300" height="121"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_8NWjo-sbEeyeF-J0HwQntg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8NWjpesbEeyeF-J0HwQntg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NWjpusbEeyeF-J0HwQntg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NWjp-sbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NWjqOsbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NWjqesbEeyeF-J0HwQntg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NWjqusbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NWjq-sbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NWjrOsbEeyeF-J0HwQntg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NWjresbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NWjrusbEeyeF-J0HwQntg"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="smartcityMM.ecore#//House"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8NWjpOsbEeyeF-J0HwQntg" x="456" y="300" width="253"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_8NWjr-sbEeyeF-J0HwQntg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8NXKsOsbEeyeF-J0HwQntg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NXKsesbEeyeF-J0HwQntg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NXKsusbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NXKs-sbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NXKtOsbEeyeF-J0HwQntg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NXKtesbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NXKtusbEeyeF-J0HwQntg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8NXKt-sbEeyeF-J0HwQntg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8NXKuOsbEeyeF-J0HwQntg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8NXKuesbEeyeF-J0HwQntg"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="smartcityMM.ecore#//Service"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8NWjsOsbEeyeF-J0HwQntg" x="828" y="300" width="277"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_GNWOcesHEeyXw5aNeM3JUg"/>
+  <element xmi:type="ecore:EPackage" href="smartcityMM.ecore#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_8PAwgOsbEeyeF-J0HwQntg" type="4002" source="_8NNZsOsbEeyeF-J0HwQntg" target="_8NV8lusbEeyeF-J0HwQntg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PBXkOsbEeyeF-J0HwQntg" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PBXkesbEeyeF-J0HwQntg" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PBXkusbEeyeF-J0HwQntg" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PBXk-sbEeyeF-J0HwQntg" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8PAwgesbEeyeF-J0HwQntg" fontName="Ubuntu"/>
+    <element xmi:type="ecore:EReference" href="smartcityMM.ecore#//City/transportData"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8PAwgusbEeyeF-J0HwQntg" points="[-29, 0, 287, -93]$[-316, 0, 0, -93]$[-316, 93, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PhG0usbEeyeF-J0HwQntg" id="(0.24369747899159663,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PhG0-sbEeyeF-J0HwQntg" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_8PLvoOsbEeyeF-J0HwQntg" type="4003" source="_8NNZsOsbEeyeF-J0HwQntg" target="_8NWjo-sbEeyeF-J0HwQntg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PLvo-sbEeyeF-J0HwQntg" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PLvpOsbEeyeF-J0HwQntg" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PLvpesbEeyeF-J0HwQntg" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PLvpusbEeyeF-J0HwQntg" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8PLvoesbEeyeF-J0HwQntg" fontName="Ubuntu"/>
+    <element xmi:type="ecore:EReference" href="smartcityMM.ecore#//City/houses"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8PLvousbEeyeF-J0HwQntg" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PgfwOsbEeyeF-J0HwQntg" id="(0.4957983193277311,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PgfwesbEeyeF-J0HwQntg" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_8PPaAOsbEeyeF-J0HwQntg" type="4003" source="_8NNZsOsbEeyeF-J0HwQntg" target="_8NWjr-sbEeyeF-J0HwQntg">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PPaA-sbEeyeF-J0HwQntg" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PPaBOsbEeyeF-J0HwQntg" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8PPaBesbEeyeF-J0HwQntg" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8PPaBusbEeyeF-J0HwQntg" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8PPaAesbEeyeF-J0HwQntg" fontName="Ubuntu"/>
+    <element xmi:type="ecore:EReference" href="smartcityMM.ecore#//City/services"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8PPaAusbEeyeF-J0HwQntg" points="[30, 0, -330, -93]$[367, 0, 7, -93]$[367, 93, 7, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PhG0OsbEeyeF-J0HwQntg" id="(0.7478991596638656,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8PhG0esbEeyeF-J0HwQntg" id="(0.4975845410628019,0.0)"/>
+  </edges>
+</notation:Diagram>

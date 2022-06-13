@@ -1,5 +1,4 @@
 $(function () {
-   "use strict";
     var offset = 0;
     plotLine();
     plotPie();

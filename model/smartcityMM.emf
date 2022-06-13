@@ -1,37 +1,34 @@
 @namespace(uri="city.project.mde", prefix="")
 package cityMM;
 
-
-class City{
+class City {
 	attr String name;
 	attr int population;
 	attr float area;
-    attr float lat;
+	attr float lat;
 	attr float lng;
 	val House[*] houses;
-	val Service[*] services; 
-	val Point[*] shape;
-	val MobileNetworkAntenna[*] mobileNetworks;
-	ref Transport transportData; 
+	val Service[*] services;
+	//val Point[*] shape;
+	//val MobileNetworkAntenna[*] mobileNetworks;
+	ref Transport transportData;
 }
 
-class Transport{
+class Transport {
 	attr boolean hasDynamicPublicTransitInformation;
 	attr boolean trafficMonitoring;
 	attr boolean intersectionControl;
 }
 
-class House{
+class House {
 	attr String address;
 	attr boolean hasInternetAccess;
 	attr float bandWidth;
 	attr boolean hasSmartElectricMeter;
 	attr String electricalClass;
-	  
 }
 
-
-class Service{
+class Service {
 	attr String name;
 	attr float bandWidth;
 	attr boolean hasWebOrMobileApp;
@@ -39,15 +36,15 @@ class Service{
 	attr boolean isAvailableEPayments;
 }
 
-class MobileNetworkAntenna{
-	attr float x;
-	attr float y;
-	attr String mobileProtocol = "3G";
-	attr float raidusCoverange;
-}
+//class MobileNetworkAntenna {
+	//attr float x;
+	//attr float y;
+	//attr String mobileProtocol = "3G";
+	//attr float raidusCoverange;
+//}
 
-//// HELPER CLASES AND DEFINITIONS ////
-class Point{
-	attr float x;
-	attr float y;
-}
+//class Point {
+	//attr float x;
+	//attr float y;
+//}
+

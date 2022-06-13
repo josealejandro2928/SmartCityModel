@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="city.project.mde">
-  <City name="L'Aquila" population="250000" area="473.9" lat="42.34884" lng="13.3994" transportData="/4">
+  <City name="L'Aquila" population="250000" area="473.9" lat="42.34884" lng="13.3994" transportData="/2">
     <houses address="address 1" hasInternetAccess="true" bandWidth="50.0" electricalClass="A"/>
     <houses address="address 2" hasInternetAccess="true" bandWidth="50.0" electricalClass="A"/>
     <houses address="address 3" hasInternetAccess="true" bandWidth="50.0" electricalClass="A"/>
@@ -31,15 +31,7 @@
     <services name="Service8" bandWidth="15.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
     <services name="Service9" bandWidth="25.0" isAvailableEPayments="true"/>
     <services name="Service10" bandWidth="25.0" hasWebOrMobileApp="true" hasPublicWiFi="true" isAvailableEPayments="true"/>
-    <shape/>
-    <shape x="2.0"/>
-    <shape x="2.0" y="3.0"/>
-    <mobileNetworks x="1.0" y="1.0" mobileProtocol="4G" raidusCoverange="0.7"/>
-    <mobileNetworks x="1.0" y="2.0" mobileProtocol="4G" raidusCoverange="1.0"/>
-    <mobileNetworks x="2.0" y="3.0" mobileProtocol="4G" raidusCoverange="1.25"/>
   </City>
-  <Point y="3.0"/>
   <Transport trafficMonitoring="true"/>
-  <Point y="3.0"/>
   <Transport trafficMonitoring="true"/>
 </xmi:XMI>
