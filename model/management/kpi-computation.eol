@@ -14,7 +14,6 @@ kpi.getAverageBandWidth(city);
 kpi.getPercentHousesAccesToInternet(city);
 kpi.getPercentHousesBadEnergyEfficiency(city);
 kpi.getPercentHousesSmartElectricMeter(city);
-//kpi.getPercentNetworkCoverageCity(city);
 kpi.getSmartTransportLevelCity(city);
 kpi.getPercentServicesAvailableEPayments(city);
 kpi.getPercentServicesWebOrMobileApp(city);
